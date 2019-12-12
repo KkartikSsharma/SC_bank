@@ -72,5 +72,9 @@ section.pdf-toolbar button:focus {
 }
 
 .break{
-    page-break-inside: avoid !important;
-}
+      display: block;
+        page-break-before: always !important;
+    }
+
+
+
