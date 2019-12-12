@@ -127,7 +127,7 @@ export default class Resume extends Component {
                         </div>)}
 
                 </div>
-                <div className="col-sm-12 col-xs-12" style={{ padding: "0px", marginTop: "30px" }}>
+                <div className="col-sm-12 col-xs-12 break" style={{ padding: "0px", marginTop: "30px" }}>
                     <div className="col-sm-5 col-xs-12" style={{ padding: "0px" }}>
                         <div className="col-sm-12 col-xs-12" style={{ fontSize: "30px", padding: "0", color: "#177acc", textAlign: "left", borderBottom: "3px solid black" }}>
                             Certificates
@@ -144,7 +144,7 @@ export default class Resume extends Component {
                     </div>
 
 
-                    <div className="col-sm-5 col-xs-12 col-sm-offset-2 break" style={{ padding: "0px" }}>
+                    <div className="col-sm-5 col-xs-12 col-sm-offset-2" style={{ padding: "0px" }}>
                         <div className="col-sm-12 col-xs-12" style={{ fontSize: "30px", padding: "0", color: "#177acc", textAlign: "left", borderBottom: "3px solid black" }}>
                             Extra-Curricular Activities
                         </div>
