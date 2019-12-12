@@ -70,3 +70,7 @@ section.pdf-toolbar button:focus {
   border: 1px solid #333;
   background-color: #eee;
 }
+
+.break{
+  page-break-inside: avoid !important;
+}
