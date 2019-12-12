@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import "./style.css";
 import Doc from "./DocService";
 import PdfContainer from "./PDFContainer.js";
+import Resume from "./resume";
 
 export default class PDF extends Component {
   constructor(props) {
@@ -33,31 +34,9 @@ export default class PDF extends Component {
           <span className="header">Export React Component to PDF</span>
         </section>
         <PdfContainer createPdf={this.createPdf}>
-          <React.Fragment>
-            <section className="flex-column">
-              <h2 className="flex">Form Name</h2>
-              <section className="flex-row">
-                <input
-                  placeholder="Rank"
-                  name="rank"
-                  value={this.state.rank}
-                  onChange={this.onChange}
-                />
-                <input
-                  className="flex"
-                  placeholder="Name"
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.onChange}
-                />
-              </section>
-              <textarea
-                rows="20"
-                placeholder="Description"
-                name="description"
-                value={this.state.description}
-                onChange={this.onChange}
-              />
+          <React.Fragment style={{padding:"50px"}}>
+            <section >
+            <Resume/>
             </section>
           </React.Fragment>
         </PdfContainer>
