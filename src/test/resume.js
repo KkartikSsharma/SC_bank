@@ -99,10 +99,10 @@ export default class Resume extends Component {
                 </div>
                 <div className="col-sm-12 col-xs-12" style={{ padding: "0px" }}>
                     <div className="col-sm-5 col-xs-5" style={{ padding: "0px", margin: "0px", marginTop: "25px", fontWeight: "bold" }}>
-                        <p style={{ fontSize: "50px", color: "#177acc", textAlign: "left", borderBottom: "3px solid black", width: "100%", marginRight: "0px" }}>{this.state.cv.name}</p>
+                        <p style={{ fontSize: "50px", color: "#177acc", textAlign: "left", borderBottom: "3px solid black", width: "101%", marginRight: "0px" }}>{this.state.cv.name}</p>
                     </div>
-                    <div className="col-sm-2 col-xs-2" style={{ padding: "0px", margin: "0px", width: "15em", borderRadius: "7.5em", border: "5px solid #177acc", height: "15em" }}>
-                        <img src={this.state.cv.dp} style={{ height: "14.5em", width: "14.6em", borderRadius: "7.25em", paddingRight: "0.3em" }} />
+                    <div className="col-sm-2 col-xs-12" style={{ padding: "0px",paddingLeft:"0.4em", margin: "0px", width: "15em", borderRadius: "7.5em", height: "15em" }}>
+                        <img src={this.state.cv.dp} style={{ height: "14.6em", width: "14.6em", borderRadius: "7.5em", border: "0.4em solid #177acc" }} />
                     </div>
                     <div className="col-sm-5 col-xs-5" style={{ padding: "0px", margin: "0px" }}>
                         <div style={{ color: "#177acc", textAlign: "left", borderBottom: "3px solid black", width: "100%", marginTop: "99px" }}></div>
