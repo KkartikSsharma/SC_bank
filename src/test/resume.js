@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import './style.css'
+import './style.css';
+import QR from './QRCode.jpeg';
+
 export default class Resume extends Component {
     constructor(props) {
         super(props)
@@ -22,7 +24,7 @@ export default class Resume extends Component {
             showCertificates: false,
             showExtraCurriculum: false
         }
-        // window.print();
+  
     }
     fetchDataHandler() {
         Axios.get("http://engineershub.org.in/engineers_hub_2/resume_download.php?operation=0&uid=23cfb2d1-4544-4e3c-add4-37e60551")
@@ -84,18 +86,23 @@ export default class Resume extends Component {
                 if (this.state.extra != "") {
                     this.setState({ showExtraCurriculum: true })
                 }
+                window.print();
             }
             )
     }
     render() {
         return (
             <div className="col-sm-12 col-xs-12" style={{ fontFamily: "montserrat", padding: "50px" }}>
+                <div className="col-sm-1 col-xs-12 col-sm-offset-11" style={{padding:"0px",marginBottom:"-6em",textAlign:"left"}}>
+                    {/* <img src={QR} style={{width:"6em",height:"6em"}}/> uncomment if you want to print with button */}
+                    <img src={QR} style={{width:"7em",height:"7em"}}/>
+                </div>
                 <div className="col-sm-12 col-xs-12" style={{ padding: "0px" }}>
                     <div className="col-sm-5 col-xs-5" style={{ padding: "0px", margin: "0px", marginTop: "25px", fontWeight: "bold" }}>
-                        <p style={{ fontSize: "50px", color: "#177acc", textAlign: "left", borderBottom: "3px solid black", width: "100%", marginRight: "0px" }}>{this.state.cv.name}</p>
+                        <p style={{ fontSize: "50px", color: "#177acc", textAlign: "left", borderBottom: "3px solid black", width: "101%", marginRight: "0px" }}>{this.state.cv.name}</p>
                     </div>
-                    <div className="col-sm-2 col-xs-2" style={{ padding: "0px", margin: "0px", width: "15em", borderRadius: "7.5em", border: "5px solid #177acc", height: "15em" }}>
-                        <img src={this.state.cv.dp} style={{ height: "14.5em", width: "14.6em", borderRadius: "7.25em", paddingRight: "0.3em" }} />
+                    <div className="col-sm-2 col-xs-12" style={{ padding: "0px",paddingLeft:"0.4em", margin: "0px", width: "15em", borderRadius: "7.5em", height: "15em" }}>
+                        <img src={this.state.cv.dp} style={{ height: "14.6em", width: "14.6em", borderRadius: "7.5em", border: "0.4em solid #177acc" }} />
                     </div>
                     <div className="col-sm-5 col-xs-5" style={{ padding: "0px", margin: "0px" }}>
                         <div style={{ color: "#177acc", textAlign: "left", borderBottom: "3px solid black", width: "100%", marginTop: "99px" }}></div>
@@ -163,7 +170,7 @@ export default class Resume extends Component {
                             </div>)}
 
                     </div></div> : null}
-                {/* <div className="col-sm-12 col-xs-12 break" style={{ padding: "0px", marginTop: "30px" }}>
+                <div className="col-sm-12 col-xs-12 break" style={{ padding: "0px", marginTop: "30px" }}>
                     {this.state.showCertificates ?
                         <div className="col-sm-12 col-xs-12" style={{ padding: "0px" }}>
                             <div className="col-sm-12 col-xs-12" style={{ fontSize: "30px", padding: "0", color: "#177acc", textAlign: "left", borderBottom: "3px solid black" }}>
@@ -196,8 +203,8 @@ export default class Resume extends Component {
                                 </div>)}
                         </div>
                     </div> : null}
-                </div> */}
-                <div className="col-sm-12 col-xs-12" style={{padding:"0px",paddingTop:"30px"}}>
+                </div>
+                {/* <div className="col-sm-12 col-xs-12" style={{padding:"0px",paddingTop:"30px"}}>
                     <table>
                         <colgroup>
                             <col span="1" style={{width: "33.33%"}} />
@@ -239,7 +246,7 @@ export default class Resume extends Component {
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </div> */}
             </div>
 
         )
